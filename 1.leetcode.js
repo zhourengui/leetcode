@@ -4,6 +4,7 @@
 // 1. (0,0)大于目标值和(matrix.length-1, matrix[0].length-1)小于目标值都是false
 // 2. 列在往上走，所以列要大于0
 // 3. 行在往右走，所以要小于matrix[0].length
+// 时间复杂度：O(n+m)
 
 /**
  * @param {number[][]} matrix

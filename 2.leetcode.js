@@ -1,5 +1,7 @@
 // https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
-// f(n) = f(n - 1) + f(n + 2)
+// 解题思路：
+// 1.f(n) = f(n - 1) + f(n + 2)
+// 时间复杂度：O(n)
 
 /**
  * @param {number} n
