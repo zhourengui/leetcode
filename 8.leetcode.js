@@ -1,7 +1,7 @@
 // https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/submissions/
 // 解题思路：
 // 1. 遍历，但是不能在原来的字符串中直接操作，因为字符串是线性结构
-// 时间复杂度：O(n), 空间复杂度：O(1)
+// 时间复杂度：O(n), 空间复杂度O(1)
 /**
  * @param {string} s
  * @return {string}
