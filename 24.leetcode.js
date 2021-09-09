@@ -1,4 +1,7 @@
 // https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/
+// 解题思路：
+// 1. 前提条件：必须两个数以上并且，是连续的，所有直接取一半，遍历一半就行
+// 时间复杂度：O(n**2)
 
 /**
  * @param {number} target
