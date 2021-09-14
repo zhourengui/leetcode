@@ -1,5 +1,7 @@
 // https://leetcode-cn.com/problems/integer-break/
 
+// 解法一：贪心算法
+
 /**
  * @param {number} n
  * @return {number}
@@ -27,4 +29,4 @@ var integerBreak = function (n) {
   return s;
 };
 
-console.log(integerBreak(9));
+// 解法二：动态规划
