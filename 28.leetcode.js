@@ -1,5 +1,6 @@
 // https://leetcode-cn.com/problems/height-checker/
 
+// 解法一：
 // 解题思路：
 // 1. 对数组排序
 // 2. 排好序的数组和元素组比较
@@ -44,4 +45,29 @@ var heightChecker = function (heights) {
   return c;
 };
 
-heightChecker([5, 1, 2, 3, 4]);
+// 解法二：
+// 解题思路：
+// 1. 桶排序
+// 时间复杂度：O(n)
+/**
+ * @param {number[]} heights
+ * @return {number}
+ */
+var heightChecker = function (heights) {
+  let arr = new Array(10).fill(0),
+    count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    arr[heights[i]]++;
+  }
+
+  for (let i = 1, j = 0; i < arr.length; i++) {
+    while (arr[i]-- > 0) {
+      if (heights[j++] != i) {
+        count++;
+      }
+    }
+  }
+
+  return count;
+};
