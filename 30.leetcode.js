@@ -22,7 +22,7 @@ var strToInt = function (str) {
 
   while (p1 < l) {
     c = str[p1];
-    isN = /[0-9]{1}/.test(c);
+    isN = Number(c) >= 0 && Number(c) <= 9;
     isS = c === "-" || c === "+";
 
     if (isN || isS) break;
@@ -39,7 +39,7 @@ var strToInt = function (str) {
   while (p2 < l) {
     p2++;
     c = str[p2];
-    isN = /[0-9]{1}/.test(c);
+    isN = Number(c) >= 0 && Number(c) <= 9;
     if (!isN) {
       p2--;
       break;
