@@ -1,6 +1,7 @@
 // https://leetcode-cn.com/problems/symmetric-tree/
 // 解题思路：
-// 1. 遍历树，判断左树和右树的值是否相等，同时也要满足左树的左树等于右树的右树，左树的右树等于右树的左树
+// 1. 分治思想
+// 2. 遍历树，判断左树和右树的值是否相等，同时也要满足左树的左树等于右树的右树，左树的右树等于右树的左树
 
 /**
  * Definition for a binary tree node.
