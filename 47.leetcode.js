@@ -1,6 +1,7 @@
 // https://leetcode-cn.com/problems/climbing-stairs/
 
 // 解题思路：
+// 动态规划思想
 // 1. f(1) = 1
 // 2. f(2) = 2
 // 3. f(3) = 3
