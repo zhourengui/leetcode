@@ -37,5 +37,7 @@ var removeDuplicates = function (nums) {
     p3++;
   }
 
+  arr.length = count;
+
   return count;
 };
