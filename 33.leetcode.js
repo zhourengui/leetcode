@@ -7,17 +7,17 @@
  */
 var intersection = function (nums1, nums2) {
   const set1 = new Set(),
-    res = [];
+    set2 = new Set();
 
-  for (let i = 0; i < nums1.length; i++) {
-    set1.add(nums1[i]);
+  for (const item of nums1) {
+    set1.add(item);
   }
 
-  for (let i = 0; i < nums2.length; i++) {
-    if (set1.has(nums2[i])) {
-      res.push(nums2[i]);
+  for (const item of nums2) {
+    if (set1.has(item)) {
+      set2.add(item);
     }
   }
 
-  return [...new Set(res)];
+  return [...set2];
 };
