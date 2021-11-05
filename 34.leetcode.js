@@ -32,3 +32,44 @@ var maxDepth = function (root) {
 
   return maxDeepth;
 };
+
+// 解题思路：
+// 1. 非递归遍历，使用中序遍历
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth = function (root) {
+  if (!root) return 0;
+  let maxDeepth = 0;
+  let stack = [];
+  let p = [root, 1];
+  while (stack.length || p) {
+    while (p) {
+      const [current, depth] = p;
+      stack.push(p);
+      if (current.left) {
+        p = [current.left, depth + 1];
+      } else {
+        p = null;
+      }
+    }
+    const [current, depth] = stack.pop();
+    if (!current.left && !current.right) {
+      maxDeepth = Math.max(maxDeepth, depth);
+    }
+    if (current.right) {
+      p = [current.right, depth + 1];
+    }
+  }
+  return maxDeepth;
+};

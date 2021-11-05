@@ -14,7 +14,6 @@
 var isPalindrome = function (head) {
   let stack = [];
   let p1 = head;
-  let p2 = 0;
 
   while (p1 !== null) {
     stack.push(p1.val);
