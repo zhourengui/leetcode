@@ -11,3 +11,5 @@
  * @return {boolean}
  */
 var isPowerOfThree = function (n) {};
+
+// 解法四：对数
